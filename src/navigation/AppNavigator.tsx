@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useAuth } from '../context/AuthContext';
 import { LoginScreen } from '../screens/LoginScreen';
 import { HomeScreen } from '../screens/HomeScreen';
+import { PaymentsScreen } from '../screens/PaymentsScreen';
 import { ActivityIndicator, View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -53,7 +54,7 @@ export const AppNavigator = () => {
                         />
                         <Stack.Screen 
                             name="Payments" 
-                            component={() => null}
+                            component={PaymentsScreen}
                             options={{ 
                                 title: 'Pagos',
                                 ...commonHeaderStyle
